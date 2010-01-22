@@ -33,7 +33,7 @@ public class Stats extends Animation {
 		g.setColor (new Color (129, 226, 212));
 		top = getSmallFontHeight (g, "LIFES") - 5;
 		left = 5;
-		g.drawString ("LIFES", left, top);
+		g.drawString ("LIVES", left, top);
 		
 		g.setColor (new Color (255, 255, 255));
 		top = 2 * getSmallFontHeight (g, Arcade.getPlayer ().getLifes ()+"") - 10;

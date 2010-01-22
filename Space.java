@@ -80,9 +80,15 @@ public class Space extends JPanel {
 			if (shot[2] < 0) { // Player shot
 				boolean hit = false;
 				enemies = Arcade.getEnemies ().iterator ();
+				Enemy next = null;
 				
-				while (enemies.hasNext () && !hit)
-					hit = enemies.next ().hit (shot_2d);
+				while (enemies.hasNext () && !hit) {
+					next = enemies.next ();
+					hit = next.hit (shot_2d);
+				}
+				
+				if (next != null && hit)
+					Arcade.getPlayer ().addPoints (next.getHitPoints ());
 				
 				if (shot[1] < 0 || hit)
 					shots.remove ();

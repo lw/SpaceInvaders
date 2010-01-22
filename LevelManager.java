@@ -6,7 +6,7 @@
  */
 
 public class LevelManager {
-	private static int level = 1;
+	private static int level = 0;
 	private static final int NUM_LEVELS = 3;
 	
 	// Getters and detters
@@ -22,7 +22,7 @@ public class LevelManager {
 			// Aggiungere il/i nemico/i in queste righe,
 			// passandolo come parametro a Arcade.addEnemy
 			// Esempio:
-			Arcade.addEnemy (new TestEnemy (false));
+			Arcade.addEnemy (new Boss ());
 		}
 		else if (level == 2) {
 			Arcade.addEnemy (new RotShooter (50, -90));
